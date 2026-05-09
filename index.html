@@ -1,49 +1,159 @@
-]<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<title>BOX</title>
-<style>
-  body{
-    margin:0;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background:#0b0b0d;
-    font-family:Arial, sans-serif;
-  }
-
-  .container{
-    display:flex;
-    gap:30px;
-  }
-
-  .box{
-    width:260px;
-    height:150px;
-    background:#111;
-    color:#fff;
-    border:2px solid #0ff;
-    box-shadow:0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
-    border-radius:10px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:18px;
-    text-align:center;
-    transition:0.3s ease;
-  }
-
-  .box:hover{
-    box-shadow:0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
-    transform:scale(1.05);
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Christian Sison - Portfolio</title>
+    <style>
+        :root {
+            --primary-dark: #2c3e50;
+            --accent-blue: #3498db;
+            --text-gray: #7f8c8d;
+            --bg-light: #f4f4f4;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-light);
+            margin: 0;
+            padding: 20px;
+        }
+        .resume-card {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            min-height: 1000px;
+        }
+        /* Sidebar */
+        .sidebar {
+            background-color: var(--primary-dark);
+            color: #fff;
+            padding: 30px;
+        }
+        .sidebar h2 {
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-blue);
+            padding-bottom: 8px;
+            margin-top: 30px;
+        }
+        .info-link { font-size: 0.85rem; margin: 10px 0; color: #bdc3c7; }
+        .skill-tag { 
+            display: inline-block; 
+            background: #34495e; 
+            padding: 4px 10px; 
+            border-radius: 4px; 
+            margin: 3px; 
+            font-size: 0.8rem;
+        }
+        /* Main Body */
+        .main { padding: 40px; }
+        .header { border-bottom: 4px solid var(--primary-dark); margin-bottom: 30px; }
+        .header h1 { margin: 0; font-size: 2.8rem; color: var(--primary-dark); }
+        .header p { margin: 5px 0 15px; color: var(--accent-blue); font-weight: bold; letter-spacing: 1px; }
+        
+        section { margin-bottom: 35px; }
+        h2.section-title { 
+            color: var(--primary-dark); 
+            text-transform: uppercase; 
+            font-size: 1.2rem; 
+            border-left: 5px solid var(--accent-blue); 
+            padding-left: 15px; 
+            margin-bottom: 20px;
+        }
+        .entry { margin-bottom: 20px; }
+        .entry-header { display: flex; justify-content: space-between; font-weight: bold; }
+        .entry-sub { color: var(--text-gray); font-style: italic; font-size: 0.9rem; }
+        
+        /* Certifications Specific Styling */
+        .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .cert-item { 
+            background: #f9f9f9; 
+            padding: 15px; 
+            border-radius: 5px; 
+            border: 1px solid #eee;
+        }
+        .cert-name { font-weight: bold; color: var(--primary-dark); display: block; margin-bottom: 5px; }
+    </style>
 </head>
 <body>
 
-<div class="container">
-  <div class="box">Extreme</div>
-  <div class="box">Mania</div>
+<div class="resume-card">
+    <aside class="sidebar">
+        <h2>Contact</h2>
+        <div class="info-link">📞 +63-945-295-7906</div>
+        <div class="info-link">✉️ prezton14@gmail.com</div>
+        <div class="info-link">📍 Paranaque City</div>
+
+        <h2>Technical Skills</h2>
+        <span class="skill-tag">C</span>
+        <span class="skill-tag">C++</span>
+        <span class="skill-tag">Microsoft Office</span>
+        <span class="skill-tag">Powerpoint</span>
+
+        <h2>Languages</h2>
+        <div class="info-link">English</div>
+        <div class="info-link">Tagalog</div>
+        <div class="info-link">Japanese (Basic)</div>
+    </aside>
+
+    <main class="main">
+        <header class="header">
+            <h1>CHRISTIAN SISON</h1>
+            <p>FRESHIE BSIT STUDENT</p>
+        </header>
+
+        <section>
+            <h2 class="section-title">Education</h2>
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Lyceum of the Philippines University - Manila</span>
+                    <span>2023 - 2024</span>
+                </div>
+                <div class="entry-sub">Bachelor of Science in Information Technology (BSIT)</div>
+            </div>
+
+            <div class="entry">
+                <div class="entry-header">
+                    <span>Manila Tytana Colleges</span>
+                    <span>2021 - 2023</span>
+                </div>
+                <div class="entry-sub">General Academic Strand (GAS) | GPA: 91 (With Honors)</div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="section-title">Certifications & Training</h2>
+            <div class="cert-grid">
+                <div class="cert-item">
+                    <span class="cert-name">Data Analytics</span>
+                    <div class="entry-sub">Tech Voyage</div>
+                    <div class="entry-sub">Issued: April 23, 2024</div>
+                </div>
+                
+                <div class="cert-item">
+                    <span class="cert-name">Cloud Gaming</span>
+                    <div class="entry-sub">Tech Voyage</div>
+                    <div class="entry-sub">Issued: April 22, 2024</div>
+                </div>
+
+                <div class="cert-item">
+                    <span class="cert-name">Artificial Intelligence</span>
+                    <div class="entry-sub">TechTutor Philippines</div>
+                    <div class="entry-sub">Issued: Oct 14, 2023</div>
+                </div>
+
+                <div class="cert-item">
+                    <span class="cert-name">Teamwork & Collaboration</span>
+                    <div class="entry-sub">PSITE</div>
+                    <div class="entry-sub">Issued: Sept 27, 2023</div>
+                </div>
+            </div>
+        </section>
+    </main>
 </div>
 
 </body>
